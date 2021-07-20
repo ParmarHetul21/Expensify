@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/drawer_layout"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE"
+    tools:context=".AddCategory">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/tvcategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtcatname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="46dp"
+                android:layout_marginTop="60dp"
+                android:ems="10"
+                android:hint="Category Name"
+                app:layout_constraintStart_toStartOf="@+id/tvcategory"
+                app:layout_constraintTop_toBottomOf="@+id/tvcategory" />
+
+            <RadioGroup
+                android:id="@+id/catgroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/edtnote"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/edtcatname"
+                app:layout_constraintTop_toBottomOf="@+id/edtcatname"
+
+                tools:ignore="MissingConstraints">
+
+                <RadioButton
+                    android:id="@+id/rbexpense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
+                    android:elevation="4dp"
+                    android:padding="10dp"
+                    android:text="Expense"
+                    android:textColor="@drawable/text_color"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="92dp"
+                    tools:layout_editor_absoluteY="395dp" />
+
+                <RadioButton
+                    android:id="@+id/rdincome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
+                    android:elevation="4dp"
+                    android:padding="10dp"
+                    android:text="Income"
+                    android:textColor="@drawable/text_color"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="242dp"
+                    tools:layout_editor_absoluteY="394dp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/edtnote_ic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="Note"
+                android:inputType="textMultiLine"
+                android:maxLines="3"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="@+id/spinner"
+                app:layout_constraintStart_toStartOf="@+id/catgroup"
+                app:layout_constraintTop_toBottomOf="@+id/catgroup" />
+
+            <Spinner
+                android:id="@+id/spinner_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/edtnote_ic"
+                app:layout_constraintStart_toStartOf="@+id/edtnote_ic"
+                app:layout_constraintTop_toBottomOf="@+id/edtnote_ic" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="80dp"
+                android:clickable="true"
+                android:src="@drawable/save"
+                app:backgroundTint="#C6EC29"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.873"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/spinner_icon"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

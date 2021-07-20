@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/expense_layout"
+    android:background="#EEEEEE"
+    tools:context=".addexpense">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/main_toolbar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/addexpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Add Expense"
+                android:textSize="24dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/edtdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="64dp"
+                android:ems="10"
+                android:focusable="false"
+                android:inputType="none"
+                android:hint="Date"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.485"
+                app:layout_constraintStart_toStartOf="@+id/addexpense"
+                app:layout_constraintTop_toBottomOf="@+id/addexpense" />
+
+            <EditText
+                android:id="@+id/edtamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:hint="Amount"
+                android:isScrollContainer="false"
+                android:inputType="numberDecimal"
+                app:layout_constraintEnd_toEndOf="@+id/edtdate"
+                app:layout_constraintHorizontal_bias="0.485"
+                app:layout_constraintStart_toStartOf="@+id/edtdate"
+                app:layout_constraintTop_toBottomOf="@+id/edtdate" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="@+id/edtamount"
+                app:layout_constraintStart_toStartOf="@+id/edtamount"
+                app:layout_constraintTop_toBottomOf="@+id/edtamount" />
+
+            <EditText
+                android:id="@+id/edtnote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:ems="10"
+                android:hint="Note"
+                android:gravity="start|top"
+                android:overScrollMode="always"
+                android:scrollbarStyle="insideInset"
+                android:scrollbars="vertical"
+                android:maxLines="3"
+                android:inputType="textMultiLine"
+                app:layout_constraintEnd_toEndOf="@+id/spinner"
+                app:layout_constraintStart_toStartOf="@+id/spinner"
+                app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:id="@+id/rgroup"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="@+id/edtnote"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/edtnote"
+                app:layout_constraintTop_toBottomOf="@+id/edtnote"
+
+                tools:ignore="MissingConstraints">
+
+                <RadioButton
+                    android:id="@+id/rbcash"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
+                    android:elevation="4dp"
+                    android:padding="10dp"
+                    android:text="Cash"
+                    android:textColor="@drawable/text_color"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="92dp"
+                    tools:layout_editor_absoluteY="395dp" />
+
+                <RadioButton
+                    android:id="@+id/rbcard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/radio_selector"
+                    android:button="@android:color/transparent"
+                    android:elevation="4dp"
+                    android:padding="10dp"
+                    android:text="Card"
+                    android:textColor="@drawable/text_color"
+                    android:textSize="20dp"
+                    tools:layout_editor_absoluteX="242dp"
+                    tools:layout_editor_absoluteY="394dp" />
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btnadd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="22dp"
+                android:text="Add"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.854"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rgroup" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@android:color/white">
+
+        <include layout="@layout/main_nav_drawer"/>
+
+    </RelativeLayout>
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

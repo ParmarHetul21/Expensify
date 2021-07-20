@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">expensify</string>
+    <string name="text1">Food</string>
+    <string name="text2">Entertainment</string>
+    <string name="text3">Salary</string>
+    <string name="text4">Interest</string>
+    <string name="text5">Travelling</string>
+    <string name="text6">Shopping</string>
+    <string name="text7">Others</string>
+    <string name="text8">Cloth</string>
+    <string name="text9">SoldItems</string>
+    <string name="text10">Coupons</string>
+    <string name="text">All Categories</string>
+    <string name="textall">All Payment Modes</string>
+    <string name="textcash">Cash</string>
+    <string name="textcard">Card</string>
+</resources>

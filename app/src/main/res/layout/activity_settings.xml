@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#DEDEDE"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Settings"
+            android:layout_marginBottom="20sp"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btnbackup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:backgroundTint="#EEEEEE"
+            android:paddingLeft="20dp"
+            android:text="Backup&#10;Backup My App Data"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"    
+            android:textSize="20sp"
+            app:icon="@drawable/backup"
+            app:iconPadding="10dp"
+            app:iconSize="40dp"
+            app:iconTint="#000000"
+            app:strokeColor="#131212" />
+
+        <Button
+            android:id="@+id/btnrestore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#EEEEEE"
+            android:background="@android:color/transparent"
+            android:paddingLeft="20dp"
+            android:text="Restore&#10;Restore From Existing Backup"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:icon="@drawable/restore"
+            app:iconPadding="10dp"
+            app:iconSize="40dp"
+            app:iconTint="#000000"
+             />
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="3dp"-->
+<!--            android:background="@android:color/black"/>-->
+        <Button
+            android:id="@+id/btnexport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#EEEEEE"
+            android:background="@android:color/transparent"
+            android:paddingLeft="20dp"
+            android:text="Export Data&#10;Export data to Spreadsheet"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:icon="@drawable/export"
+            app:iconPadding="10dp"
+            app:iconSize="40dp"
+            app:iconTint="#000000" />
+
+        <Button
+            android:id="@+id/btnabout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#EEEEEE"
+            android:paddingLeft="20dp"
+            android:text="About App"
+            android:background="@android:color/transparent"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:icon="@drawable/aboutus"
+            app:iconPadding="10dp"
+            app:iconSize="40dp"
+            app:iconTint="#000000" />
+
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
